@@ -10,6 +10,22 @@
     %br/
     = f.file_field :avatar
   .field
+    = f.label :name
+    %br/
+    = f.text_field :name
+  .field
+    = f.label :work_title
+    %br/
+    = f.text_field :work_title
+  .field
+    = f.label :motto
+    %br/
+    = f.text_area :motto
+  .field
+    = f.label :location
+    %br/
+    = f.text_field :location
+  .field
     = f.label :password
     - if @minimum_password_length
       %em
