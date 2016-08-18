@@ -1,0 +1,15 @@
+.row--flex
+  - @users.each do |user|
+    %ul.cards
+      %li
+        .card
+          .profile-info
+            .photo
+              -unless user.avatar.file.nil?
+                = image_tag user.avatar.url
+            .text-data
+              = "#{user.name}"
+              = "#{user.location}"
+              = "#{user.work_title}"
+          .skills
+

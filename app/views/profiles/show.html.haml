@@ -1,0 +1,14 @@
+.row--flex
+  .profile-photo
+    -unless @user.avatar.file.nil?
+      = image_tag @user.avatar.url
+.row--flex
+  .text-info
+    %h1
+      = "#{@user.id} - #{@user.name}"
+    %h2
+      = @user.work_title
+    %h2
+      = @user.location
+    %h2
+      = @user.motto
