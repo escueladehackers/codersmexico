@@ -10,7 +10,8 @@
     %div
       Currently waiting confirmation for: #{resource.unconfirmed_email}
   .field
-    = image_tag resource.avatar.thumb.url
+    - unless resource.avatar.file.nil?
+      = image_tag resource.avatar.thumb.url
     = f.label :avatar
     %br/
     = f.file_field :avatar
