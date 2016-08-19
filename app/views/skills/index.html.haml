@@ -1,0 +1,21 @@
+- unless @skills.empty?
+  %table
+    %tr
+      %th Id
+      %th name
+      %th Description
+      %th Image
+      %th Created at
+- @skills.each do |skill|
+  %table
+    %tr
+      %td
+        =skill.id
+      %td
+        =skill.name
+      %td
+        =skill.description
+      %td
+        =image_tag skill.image.url  unless skill.image.file.nil?
+      %td
+        =skill.created_at

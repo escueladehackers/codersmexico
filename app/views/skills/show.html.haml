@@ -1,0 +1,10 @@
+- unless @skill.nil?
+  =@skill.id
+  %br
+  =@skill.name
+  %br
+  =@skill.description
+  %br
+  =image_tag @skill.image.url  unless @skill.image.file.nil?
+  %br
+  =@skill.created_at
